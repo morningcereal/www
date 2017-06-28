@@ -108,7 +108,7 @@ a {
 
 .logo {
     position: absolute;
-    top: 45px;
+    top: 50px;
     left: 60px;
 }
 
@@ -146,7 +146,7 @@ a {
 }
 
 
-/*메인 메뉴*/
+/* 메인 메뉴 */
 
 .main-menu {
     background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
@@ -163,17 +163,45 @@ a {
 
 .main-menu>li>a {
     font-size: 1.6rem;
-    font-family: "noto sans bold";
-    color: rgba(255, 255, 255, 0.9);
+    font-family: "Noto Sans Bold";
+    color: rgba(255, 255, 255, 0.95);
     padding: 10px 21px 10px 20px;
     display: block;
+    padding: 0 20px;
+    line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+.main-menu>li>a:hover {
+    color: hsla(45, 80%, 80%, 1);
+}
+
+.main-menu>li>a ::after {
+    content: "구분선";
+    display: block;
+    background: 2px solid #181818
 }
 
 .main-menu ul {
     list-style-type: none;
     background: lime;
     position: absolute;
+}
+
+.about-html {
+    display: block;
+}
+
+.about-css {
+    display: none;
+}
+
+.about-accessibility {
+    display: none;
+}
+
+.QandA {
     display: none;
 }
 
