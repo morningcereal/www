@@ -149,7 +149,6 @@ a {
 /* 메인 메뉴 */
 
 .main-menu {
-    position: relative;
     background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
     list-style-type: none;
     border-top: 2px solid #181818;
@@ -169,7 +168,7 @@ a {
     color: rgba(255, 255, 255, 0.95);
     display: block;
     padding: 0 20px;
-    line-height: 20px;
+    line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
     text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
@@ -187,20 +186,20 @@ a {
 
 .main-menu ul {
     list-style-type: none;
+    background: lime;
     position: absolute;
+    white-space: nowrap;
+    top: 47px;
 }
 
 .main-menu ul li {
     display: inline-block;
 }
 
-.main-menu li::before {
-    content: "·";
-}
-
 .about-html {
     display: block;
     top: 0;
+    left: 0;
 }
 
 .about-css {
