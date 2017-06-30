@@ -96,11 +96,10 @@ a {
 /* 헤더 */
 
 .header {
-    min-height: 115px;
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     position: relative;
-    padding: 0 30px;
+    padding: 0 30px 40px 30px;
 }
 
 
@@ -162,7 +161,7 @@ a {
     position: relative;
 }
 
-.main-menu>li>a {
+.main-menu span {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.95);
@@ -173,12 +172,15 @@ a {
     text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
 
-.main-menu>li>a:hover {
+.main-menu span:hover,
+.main-menu span:focus {
     /*color: hsla(45, 80%, 80%, 1);*/
     color: #ff0;
+    outline: 0;
 }
 
-.main-menu>li>a:hover::after {
+.main-menu span:hover::after,
+.main-menu span:focus::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
@@ -186,17 +188,16 @@ a {
 
 .main-menu ul {
     list-style-type: none;
-    background: lime;
     position: absolute;
     white-space: nowrap;
-    top: 47px;
+    top: 45px;
 }
 
 .main-menu ul li {
     display: inline-block;
 }
 
-.main-menu ul li ::before {
+.main-menu ul a::before {
     font-family: "webcafeIcon";
     content: "r";
     position: relative;
@@ -204,38 +205,100 @@ a {
 }
 
 .main-menu ul a:hover::before,
-.main-menu ul a:hover::before {
+.main-menu ul a:focus::before {
     content: "c";
 }
 
-.about-html {
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
     display: block;
-    top: 0;
+}
+
+.about-html {
+    display: none;
     left: 0;
 }
 
 .about-css {
     display: none;
+    left: 0;
 }
 
 .web-standards {
     display: none;
+    left: 0;
 }
 
 .web-accessibility {
     display: none;
+    left: -140px;
 }
 
 .qna {
     display: none;
+    left: -170px;
 }
 
 .archive {
     display: none;
+    right: -25px;
+}
+
+
+/* 비주얼 */
+
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 70px);
+    }
+}
+
+@keyframes flower-ani {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.visual-text {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    animation: text-ani 0.5s forwards ease-in-out;
 }
 
 .visual {
     height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    animation: flower-ani 2s infinite alternate;
+}
+
+.visual::before {
+    background: url("images/ani_flower_01.png") no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+}
+
+.visual::after {
+    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+    animation-delay: 1s;
 }
 
 .main-content {
