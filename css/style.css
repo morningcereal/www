@@ -27,7 +27,8 @@
 
 /* 숨김 콘텐츠 */
 
-legend {
+legend,
+.hidden {
     position: absolute;
     left: -9999em;
 }
@@ -436,6 +437,85 @@ a {
 }
 
 .find {
+    float: right;
+}
+
+
+/* 유효성 검사 배너 링크 */
+
+.validation {
+    margin-top: 20px;
+}
+
+.validation-list {
+    list-style-type: none;
+}
+
+.validation-list a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-left: 45px;
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee 0%, #ccc 100%);
+}
+
+.term {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.term-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.term-list {
+    margin: 10px 0 0 0;
+}
+
+.term-list::before,
+.term-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    float: right;
+    width: 145px;
+}
+
+.term-list-brief,
+.term-list-thumbnail {
+    margin: 0;
+}
+
+.term-list-subject {
+    color: #296897;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list .term-list-brief {
+    margin-top: 5px;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+    float: left;
+}
+
+.even .term-list-thumbnail {
     float: right;
 }
 
